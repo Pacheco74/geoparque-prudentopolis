@@ -512,7 +512,7 @@ mapbox_token = st.sidebar.text_input("Mapbox Access Token (Opcional)", type="pas
 
 
         
-        st.markdown("---")
+       # st.markdown("---")
 
             
         # Exagero vertical
