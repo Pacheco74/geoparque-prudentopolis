@@ -1,5 +1,8 @@
 freeglut3-dev
-libgdal-dev
 libgl1-mesa-dev
 libglu1-mesa-dev
 libosmesa6-dev
+libgdal-dev
+gdal-bin
+libproj-dev
+binutils
