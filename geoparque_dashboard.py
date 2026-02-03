@@ -33,7 +33,7 @@ def load_css():
         background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
     }
     
-    .main-header {
+    .-header {
         background: linear-gradient(90deg, #1a1a1a 0%, #2d2416 50%, #1a1a1a 100%);
         padding: 2rem;
         border-radius: 10px;
@@ -42,7 +42,7 @@ def load_css():
         box-shadow: 0 8px 32px rgba(184, 134, 11, 0.2);
     }
     
-    .main-title {
+    .-title {
         color: #d4af37;
         font-size: 2.5rem;
         font-weight: 800;
@@ -269,9 +269,24 @@ def get_waterfalls_data():
     return pd.DataFrame(waterfalls)
 
 # Função para criar mapa 3D com PyDeck
-def create_3d_terrain_map(elevation_df, waterfalls_df, exaggeration=3.0, show_waterfalls=True):
+#def create_3d_terrain_map(elevation_df, waterfalls_df, exaggeration=3.0, show_waterfalls=True):
     """Cria visualização 3D do terreno usando PyDeck"""
+    def create_3d_terrain_map(elevation_df, waterfalls_df, exaggeration=3.0, show_waterfalls=True, map_style='mapbox://styles/mapbox/satellite-v9', mapbox_key=None):
     
+    # ... (mantenha o código das camadas terrain_layer, waterfalls_layer e text_layer igual ao seu)
+    
+    # Renderizar mapa
+    r = pdk.Deck(
+        layers=layers,
+        initial_view_state=view_state,
+        map_style=map_style, # Usa o estilo selecionado na sidebar
+        api_keys={'mapbox': mapbox_key} if mapbox_key else None,
+        tooltip={
+            'html': '<b>Elevação:</b> {elevation}m<br/><b>Nome:</b> {name}',
+            'style': {'backgroundColor': '#1a1a1a', 'color': '#d4af37'}
+        }
+    )
+    return r
     # Preparar dados de elevação para o GridLayer
     grid_data = elevation_df.copy()
     
@@ -461,7 +476,7 @@ def create_elevation_profile(elevation_df, point1, point2, num_points=100):
     return fig
 
 # Interface Principal
-def main():
+def ():
     load_css()
     
     # Cabeçalho
@@ -475,9 +490,31 @@ def main():
     # Sidebar - Controles
     with st.sidebar:
         st.markdown("## ⚙️ Controles de Visualização")
+# --- Adicione isso dentro do 'with st.sidebar:' ---
+      st.markdown("---")
+      st.markdown("## 🛰️ Camadas de Fundo")
+     map_style_choice = st.sidebar.radio(
+    "Escolha o estilo do mapa:",
+    options=["Satélite", "Dark Geológico", "Relevo (Light)"],
+    index=0
+)
+
+# Mapeamento para estilos oficiais do Mapbox
+map_styles = {
+    "Satélite": "mapbox://styles/mapbox/satellite-v9",
+    "Dark Geológico": "mapbox://styles/mapbox/dark-v10",
+    "Relevo (Light)": "mapbox://styles/mapbox/outdoors-v11"
+}
+
+# Campo opcional para o Token (Se você não tiver um, o satélite pode não carregar ou ficar em baixa resolução)
+mapbox_token = st.sidebar.text_input("Mapbox Access Token (Opcional)", type="password", help="Cole seu token do mapbox.com para liberar satélite em HD")
+
+
+
         
         st.markdown("---")
-        
+
+            
         # Exagero vertical
         exaggeration = st.slider(
             "Exagero Vertical do Relevo",
@@ -572,11 +609,15 @@ def main():
     # Visualização 3D principal
     st.markdown("### 🗺️ Visualização Tridimensional do Relevo")
     
-    terrain_map = create_3d_terrain_map(
-        elevation_df, 
-        waterfalls_df, 
-        exaggeration=exaggeration,
-        show_waterfalls=show_waterfalls
+   # --- Procure onde você chama a função e substitua por: ---
+terrain_map = create_3d_terrain_map(
+    elevation_df, 
+    waterfalls_df, 
+    exaggeration=exaggeration,
+    show_waterfalls=show_waterfalls,
+    map_style=map_styles[map_style_choice], # Passa a escolha do usuário
+    mapbox_key=mapbox_token if mapbox_token else None
+)
     )
     
     st.pydeck_chart(terrain_map, use_container_width=True)
