@@ -276,7 +276,7 @@ def get_waterfalls_data():
     # ... (mantenha o código das camadas terrain_layer, waterfalls_layer e text_layer igual ao seu)
     
     # Renderizar mapa
-    r = pdk.Deck(
+        r = pdk.Deck(
         layers=layers,
         initial_view_state=view_state,
         map_style=map_style, # Usa o estilo selecionado na sidebar
