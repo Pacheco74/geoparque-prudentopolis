@@ -468,7 +468,7 @@ def main():
     st.markdown("""
     <div class="main-header">
         <h1 class="main-title">🏔️ GEOPARQUE PRUDENTÓPOLIS</h1>
-        <p class="subtitle">Dashboard 3D de Topografia e Geodiversidade | Serra da Esperança - Paraná</p>
+        <p class="subtitle">Dashboard 3D de Topografia e Geodiversidade | Juliana Thaisa Rodrigues Pacheco</p>
     </div>
     """, unsafe_allow_html=True)
     
