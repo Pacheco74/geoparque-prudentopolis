@@ -1,0 +1,36 @@
+# Dashboard 3D Geoparque Prudentópolis - Dependências
+# Python 3.8+
+
+# Core
+streamlit==1.31.0
+pandas==2.1.4
+numpy==1.24.3
+
+# Visualização 3D e Mapas
+pydeck==0.8.1
+plotly==5.18.0
+
+# Processamento Geoespacial
+geopandas==0.14.2
+rasterio==1.3.9
+shapely==2.0.2
+fiona==1.9.5
+
+# Processamento de Dados
+scipy==1.11.4
+scikit-learn==1.3.2
+
+# Utilitários
+python-dotenv==1.0.0
+requests==2.31.0
+
+# Opcional - para APIs de elevação
+elevation==1.1.3
+srtm.py==0.3.7
+
+# Opcional - para processamento avançado de imagens
+Pillow==10.2.0
+opencv-python==4.9.0.80
+
+# Opcional - para download de dados SRTM
+pyproj==3.6.1
