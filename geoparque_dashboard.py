@@ -476,7 +476,7 @@ def create_elevation_profile(elevation_df, point1, point2, num_points=100):
     return fig
 
 # Interface Principal
-def ():
+#def ():
     load_css()
     
     # Cabeçalho
