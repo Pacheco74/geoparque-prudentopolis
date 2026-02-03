@@ -37,7 +37,8 @@
 
 streamlit
 pandas
-geopandas
+geopandas==0.14.0
 plotly
 pydeck
 leafmap
+mapclassify
