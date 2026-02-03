@@ -516,7 +516,7 @@ st.markdown("---")
 
             
         # Exagero vertical
-        exaggeration = st.slider(
+exaggeration = st.slider(
             "Exagero Vertical do Relevo",
             min_value=1.0,
             max_value=10.0,
@@ -526,10 +526,10 @@ st.markdown("---")
         )
         
         # Mostrar cachoeiras
-        show_waterfalls = st.checkbox("Exibir Geossítios (Cachoeiras)", value=True)
+ show_waterfalls = st.checkbox("Exibir Geossítios (Cachoeiras)", value=True)
         
         # Resolução do grid
-        grid_resolution = st.selectbox(
+ grid_resolution = st.selectbox(
             "Resolução do Terreno",
             options=[50, 100, 150],
             index=1,
