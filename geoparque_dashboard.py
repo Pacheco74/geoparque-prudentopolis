@@ -271,7 +271,7 @@ def get_waterfalls_data():
 # Função para criar mapa 3D com PyDeck
 #def create_3d_terrain_map(elevation_df, waterfalls_df, exaggeration=3.0, show_waterfalls=True):
     """Cria visualização 3D do terreno usando PyDeck"""
-    def create_3d_terrain_map(elevation_df, waterfalls_df, exaggeration=3.0, show_waterfalls=True, map_style='mapbox://styles/mapbox/satellite-v9', mapbox_key=None):
+    def create_3d_terrain_map(elevation_df, waterfalls_df, exaggeration=3.0, show_waterfalls=True, map_style='mapbox://styles/mapbox/satellite-v9', mapbox_key= None):
     
     # ... (mantenha o código das camadas terrain_layer, waterfalls_layer e text_layer igual ao seu)
     
