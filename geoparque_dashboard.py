@@ -526,10 +526,10 @@ exaggeration = st.slider(
         )
         
         # Mostrar cachoeiras
- show_waterfalls = st.checkbox("Exibir Geossítios (Cachoeiras)", value=True)
+       show_waterfalls = st.checkbox("Exibir Geossítios (Cachoeiras)", value=True)
         
         # Resolução do grid
- grid_resolution = st.selectbox(
+       grid_resolution = st.selectbox(
             "Resolução do Terreno",
             options=[50, 100, 150],
             index=1,
