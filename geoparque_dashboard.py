@@ -368,8 +368,8 @@ def create_slope_heatmap(elevation_df):
             [1, '#ff4444']
         ],
         colorbar=dict(
-            title='Declividade (°)',
-            titleside='right',
+            title=dict(text='Declividade (°)', 
+            side='right'),
             tickmode='linear',
             tick0=0,
             dtick=10,
