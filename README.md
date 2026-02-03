@@ -1,4 +1,4 @@
-# 🏔️ Geoparque Prudentópolis - Dashboard 3D
+# 🏔️ Geoparque Prudentópolis - Dashboard 3D - Juliana Pacheco
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.31+-red.svg)](https://streamlit.io/)
