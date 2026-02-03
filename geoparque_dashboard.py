@@ -489,14 +489,14 @@ def create_elevation_profile(elevation_df, point1, point2, num_points=100):
     
     # Sidebar - Controles
     with st.sidebar:
-        st.markdown("## ⚙️ Controles de Visualização")
+         st.markdown("## ⚙️ Controles de Visualização")
 # --- Adicione isso dentro do 'with st.sidebar:' ---
-      st.markdown("---")
-      st.markdown("## 🛰️ Camadas de Fundo")
-     map_style_choice = st.sidebar.radio(
-    "Escolha o estilo do mapa:",
-    options=["Satélite", "Dark Geológico", "Relevo (Light)"],
-    index=0
+         st.markdown("---")
+         st.markdown("## 🛰️ Camadas de Fundo")
+         map_style_choice = st.sidebar.radio(
+         "Escolha o estilo do mapa:",
+         options=["Satélite", "Dark Geológico", "Relevo (Light)"],
+         index=0
 )
 
 # Mapeamento para estilos oficiais do Mapbox
