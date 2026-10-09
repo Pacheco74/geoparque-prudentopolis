@@ -293,7 +293,7 @@ Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](L
 ## 👥 Autores
 
 **Projeto Geoparque Prudentópolis**
-- Desenvolvedor: [Seu Nome]
+- Desenvolvedor: Profa. Dra. Juliana Pacheco, Prof. Dr. Mauricio Pacheco
 - Contato: [seu.email@exemplo.com]
 
 **Agradecimentos:**
